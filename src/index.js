@@ -16,8 +16,9 @@ const store = createStore(
   reducer,
   applyMiddleware(sagaMiddleware)
 );
-
 sagaMiddleware.run(sagas);
+
+window.store = store;
 
 // render the application
 render(
