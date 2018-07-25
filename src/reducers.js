@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
+import { playlist } from './components/home/reducer';
 
-const todo = (state = [], action) => {return state};
 export default combineReducers({
-    todo
+    playlist
 });

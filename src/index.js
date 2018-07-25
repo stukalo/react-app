@@ -23,7 +23,7 @@ window.store = store;
 // render the application
 render(
   <Provider store={store}>
-    <Home/>
+    <Home />
   </Provider>,
   document.getElementById('root')
 );

@@ -1,13 +1,13 @@
-import React from 'react';
+import { connect } from "react-redux";
+import component from './Home';
 
-
-class Home extends React.Component {
-  componentDidMount() {
-  }
-
-  render() {
-    return (<h1>tests</h1>);
-  }
-}
-
-export default Home;
+export default connect(
+    state => ({
+        playlist: state.playlist
+    }),
+    dispatch => ({
+        onAddTrack: (track) => {
+          dispatch({ type: 'ADD_TRACK', payload: track })
+        }
+    })
+)(component);
